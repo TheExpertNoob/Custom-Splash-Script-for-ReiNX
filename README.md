@@ -1,0 +1,1 @@
+# Custom-Splash-Script-for-ReiNX
