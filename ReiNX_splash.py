@@ -1,22 +1,8 @@
-'''
-Copyright (c) 2018 letsplentendo
-
-This program is free software; you can redistribute it and/or modify it
-under the terms and conditions of the GNU General Public License,
-version 2, as published by the Free Software Foundation.
-
-This program is distributed in the hope it will be useful, but WITHOUT
-ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
-FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
-more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-'''
-
-#TODO: make size arguments
-#      fix size calculation
-#      make stride fix dependent on size
+#      ReiNX Splash Script
+#      use Python3 and Pillow module
+#      Source code from somewhere on the internet
+#      modfied by The Expert Noob / Flying Poo
+#      Feel free to use it as you wish.
 
 from PIL import Image
 import sys
@@ -36,5 +22,4 @@ for y in range(img.size[0]):
     pixels.append(0)
 with open('splash.bin','wb') as f:
   fileSize = 720 * 1280
-  f.write(bytes(str(fileSize).rjust(8, "0"), 'utf-8'))
   f.write(bytes(x for x in pixels))
