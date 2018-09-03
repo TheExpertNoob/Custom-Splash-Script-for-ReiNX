@@ -61,7 +61,6 @@ class Window(Frame):
             pixels.append(0)
         with open('splash.bin','wb') as f:
           fileSize = 720 * 1280
-          f.write(bytes(str(fileSize).rjust(8, "0"), 'utf-8'))
           f.write(bytes(x for x in pixels))
           #Everything in between here and the previous comment is written by TheExpertNoob 
 
