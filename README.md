@@ -22,3 +22,11 @@ This program is a simple GUI for the already existing Custom Splash Script for R
 8. Copy the "splash.bin" to your "ReiNX" folder on your sd card
 
 9. Enjoy
+
+## How to compile:
+1. Make sure the program fully works for you
+
+2. Run compile.bat
+
+3. The compiled executable will be created in the dist folder
+
