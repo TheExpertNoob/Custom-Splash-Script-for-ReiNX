@@ -6,6 +6,7 @@ from tkinter import ttk
 from tkinter import *
 from tkinter.ttk import *
 from PIL import Image, ImageTk
+import time
 
 class Window(Frame):
 
@@ -34,8 +35,13 @@ class Window(Frame):
         button2.place(x=200, y=350)
         self.button1 = Button(self, text="Create Splash", command=self.splash, state=DISABLED)
         self.button1.place(x=100, y=350)
-
-        load = Image.open(os.getcwd() + '\\resources\\blank.png')
+        
+        defaultPath = '\\resources\\blank.png'
+        try:
+            defaultPath = sys._MEIPASS + defaultPath
+        except:
+             defaultPath = os.getcwd() + defaultPath
+        load = Image.open(defaultPath)
         img = load.resize((380, 214))
         render = ImageTk.PhotoImage(img)
 
@@ -44,7 +50,13 @@ class Window(Frame):
         img.place(x=8,y=120)
 
     def splash(self):
-        winsound.PlaySound('resources/dl.wav', winsound.SND_ASYNC)
+        defaultPath = '\\resources\\dl.wav'
+        try:
+            defaultPath = sys._MEIPASS + defaultPath
+            print(defaultPath)
+        except:
+             defaultPath = os.getcwd() + defaultPath
+        winsound.PlaySound(defaultPath, winsound.SND_ASYNC)
         #Everything from here to the next comment is written by TheExpertNoob
         im = Image.open(filename, 'r')
         img = im.resize((1280, 720))
@@ -64,7 +76,12 @@ class Window(Frame):
           f.write(bytes(x for x in pixels))
           #Everything in between here and the previous comment is written by TheExpertNoob 
 
-        load = Image.open(os.getcwd() + '\\resources\\done.png')
+        defaultPath = '\\resources\\done.png'
+        try:
+            defaultPath = sys._MEIPASS + defaultPath
+        except:
+             defaultPath = os.getcwd() + defaultPath
+        load = Image.open(defaultPath)
         img = load.resize((380, 214))
         render = ImageTk.PhotoImage(img)
 
@@ -98,8 +115,14 @@ root = Tk()
 root.geometry("400x400")
 root.title("wm min/max")
 root.resizable(0,0)
-root.iconbitmap(os.getcwd() + '\\resources\\splash.ico')
+defaultPath = '\\resources\\splash.ico'
+try:
+    defaultPath = sys._MEIPASS + defaultPath
+except:
+    defaultPath = os.getcwd() + defaultPath
+root.iconbitmap(defaultPath)
 file_path = StringVar()
 app = Window(root)
 
 root.mainloop()
+
