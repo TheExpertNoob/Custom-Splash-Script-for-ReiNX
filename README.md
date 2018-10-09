@@ -1,5 +1,7 @@
 # Custom-Splash-Script-for-ReiNX-GUI
 
+![Preview](he.png?raw=true)
+
 This program is a simple GUI for the already existing Custom Splash Script for ReiNX. Other than the fact that I added a preview, not much is to be said. This is a component of [Unofficial ReiNX SD Stash Updater](https://github.com/lunalik2/Unofficial-ReiNX-SD-Stash-Updater). All credit goes to TheExpertNoob for creating the orginal script.
 
 **[Master Fork Here](https://github.com/TheExpertNoob/Custom-Splash-Script-for-ReiNX/tree/master)**
